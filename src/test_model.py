@@ -11,7 +11,7 @@ model_path = os.path.join(BASE_DIR, "..", "model_final.joblib")
 model_path = os.path.abspath(model_path)
 
 model = joblib.load(model_path)
-print("✅ Model loaded successfully!")
+print("Model loaded successfully!")
 
 print("Type 'exit' at any time to quit.\n")
 
@@ -30,7 +30,7 @@ def has_brand(text):
 # Interactive loop
 # -----------------------------
 while True:
-    title = input("📝 Enter product title: ")
+    title = input("Enter product title: ")
 
     # Exit
     if title.lower() == "exit":
@@ -39,7 +39,7 @@ while True:
 
     # Empty input check
     if not title.strip():
-        print("❌ Error: The title cannot be empty. Please type something.")
+        print("Error: The title cannot be empty. Please type something.")
         print("-" * 40)
         continue
 
@@ -59,5 +59,5 @@ while True:
     # Predict
     prediction = model.predict(df_input)[0]
 
-    print(f"🔎 Predicted category: {prediction}")
+    print(f"** Predicted category: {prediction}")
     print("-" * 40)

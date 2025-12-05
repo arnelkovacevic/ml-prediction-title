@@ -13,7 +13,7 @@ from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
 # -----------------------------------------------
-# Load dataset (adjust URL or path if needed)
+# Load dataset from github
 df = pd.read_csv("https://raw.githubusercontent.com/arnelkovacevic/ml-prediction-title/main/data/products.csv")
 
 # Clean column names
